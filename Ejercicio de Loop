@@ -1,0 +1,19 @@
+jugador_1 = input("Nombre de jugador 1")
+
+jugador_2 = input("Nombre de jugador 2")
+
+palitos = 13
+
+while palitos != 0:
+    sacar = int(input(f"Cuantos palitos desea sacar {jugador_1}"))
+    palitos -= sacar
+    print("Quedaron " + str(palitos) + " palitos")
+    if palitos == 0: 
+        print (f"Gano {jugador_1}")
+        break
+    sacar2 = int(input(f"Cuantos palitos desea sacar {jugador_2}"))
+    palitos -= sacar2
+    print("Quedaron " + str(palitos) + " palitos")
+    if palitos == 0: 
+        print (f"Gano {jugador_2}")
+        break
