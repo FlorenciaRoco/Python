@@ -1,0 +1,68 @@
+from random import randint
+
+rock = """
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)"""
+
+paper = """
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+"""
+
+scissors = """
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+# Pick a random number from 1 to 3
+num = randint(1,3)
+
+# Turn that random number into the computer's RPS move
+print(num)
+
+# Ask a user to enter their move
+movimiento = int(input("Coloque el número de movimiento que quiere realizar \n 1 - Piedra \n 2 - Papel \n 3 - Tijera"))
+
+# Print the rock, paper, or scissors ASCII art that corresponds to the player's move
+if movimiento == 1: 
+    print(rock)
+elif movimiento == 2:
+    print(paper)
+elif movimiento == 3:
+    print(scissors)
+
+# Print the rock, paper, or scissors ASCII art that corresponds to the computer's move
+if num == 1: 
+    print(rock)
+elif num == 2:
+    print(paper)
+elif num == 3:
+    print(scissors) 
+
+# Figure out who wins and print the result!
+
+if num == movimiento: 
+    print("Empate")
+elif num == 2 and movimiento == 1:
+    print("te gano la compu papa")
+elif num == 1 and movimiento == 2:
+    print("le ganaste a la compu genio")
+elif num == 1 and movimiento == 3:
+    print("te gano la compu papa")
+elif num == 3 and movimiento == 1:
+    print("le ganaste a la compu genio")
+elif num == 3 and movimiento == 2:
+    print("te gano la compu papa")
+elif num == 2 and movimiento == 3:
+    print("le ganaste a la compu genio")
