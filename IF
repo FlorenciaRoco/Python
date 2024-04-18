@@ -1,0 +1,6 @@
+print("Tweetee algo!!")
+Tweet = input()
+if len(Tweet) < 140:
+    print(f"Esos {len(Tweet)} caracteres van a servir")
+elif len(Tweet) > 140:
+    print(f"Esos {len(Tweet) - 140} caracteres, estuvieron de mas")
